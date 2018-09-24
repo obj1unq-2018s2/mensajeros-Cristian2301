@@ -2,9 +2,9 @@ import destinos.*
 
 object paquete {
 	var property destino
-	var property estaPago  = false
+	var property estaPago = false
 	
 	method puedeEntregarse(mensajero){
-	return destino.dejaPasar(mensajero) and estaPago
+	return estaPago and destino.dejaPasar(mensajero)
 	}
 }

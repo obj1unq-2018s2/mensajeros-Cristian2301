@@ -1,0 +1,23 @@
+import mensajeros.*
+import paquete.*
+import veiculos.*
+import destinos.*
+
+describe "test de mensajeros"{
+
+	test "roberto" {
+		roberto.pesoPropio(90)
+		camion.acoplados(1)
+		roberto.vehiculo(camion)
+		paquete.estaPago(true)
+		paquete.destino(brooklyn)                      //DUDA!!!!
+		assert.that(paquete.puedeEntregarse(roberto))
+	}
+	
+	test "neo"{
+		neo.puedeLlamar(true)
+		paquete.estaPago(false)
+		paquete.destino(laMatrix)
+		assert.notThat(paquete.puedeEntregarse(neo))
+	}
+}
