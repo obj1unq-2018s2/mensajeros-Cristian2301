@@ -10,8 +10,10 @@ describe "test de mensajeros"{
 		camion.acoplados(1)
 		roberto.vehiculo(camion)
 		paquete.estaPago(true)
-		paquete.destino(brooklyn)                      //DUDA!!!!
+		paquete.destino(brooklyn)                      
 		assert.that(paquete.puedeEntregarse(roberto))
+		paquete.destino(laMatrix)                      
+		assert.notThat(paquete.puedeEntregarse(roberto))
 	}
 	
 	test "neo"{
